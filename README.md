@@ -1,6 +1,6 @@
-# Whiteboard (frontend-only)
+# Writedown (frontend-only)
 
-A production-grade whiteboard built with a custom Canvas engine and a CRDT-backed data model (Yjs). This repo is currently configured to run and deploy as a **static site** (no backend).
+Writedown is a production-grade whiteboard built with a custom Canvas engine and a CRDT-backed data model (Yjs). This repo is currently configured to run and deploy as a **static site** (no backend).
 
 The app auto-opens the last active board on `/` and persists boards in your browser storage, so reloads and returning later will restore the board.
 

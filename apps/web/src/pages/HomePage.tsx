@@ -23,9 +23,9 @@ export function HomePage() {
     <div className="h-full bg-gradient-to-b from-background to-muted/60">
       <div className="mx-auto flex h-full max-w-4xl flex-col items-center justify-center gap-6 px-6">
         <div className="text-center">
-          <h1 className="text-balance text-4xl font-semibold tracking-tight">Whiteboard</h1>
+          <h1 className="text-balance text-4xl font-semibold tracking-tight">Writedown</h1>
           <p className="mt-2 text-pretty text-sm text-muted-foreground">
-            Real-time collaborative whiteboarding with Yjs CRDTs, optimized canvas rendering, and board persistence.
+            A fast, offline-first whiteboard with a custom canvas engine and reliable local persistence.
           </p>
         </div>
         <div className="flex items-center gap-3">
