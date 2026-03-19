@@ -25,10 +25,6 @@ export function TopBar(
           <div className="text-sm font-semibold tracking-tight">Writedown</div>
         </div>
         <div className="h-6 w-px bg-border" />
-        <div className="flex items-center gap-2 rounded-md border bg-card px-2 py-1 text-xs text-muted-foreground">
-          <span className="font-medium text-foreground">Board</span>
-          <span className="max-w-[12rem] truncate">{params.session.boardId}</span>
-        </div>
         <div className="text-xs text-muted-foreground">Local</div>
       </div>
 
