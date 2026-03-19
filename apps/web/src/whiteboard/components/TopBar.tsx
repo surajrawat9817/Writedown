@@ -24,8 +24,6 @@ export function TopBar(
           />
           <div className="text-sm font-semibold tracking-tight">Writedown</div>
         </div>
-        <div className="h-6 w-px bg-border" />
-        <div className="text-xs text-muted-foreground">Local</div>
       </div>
 
       <div className="flex items-center gap-2">
