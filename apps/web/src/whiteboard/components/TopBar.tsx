@@ -15,6 +15,16 @@ export function TopBar(
   return (
     <div className="flex h-12 items-center justify-between gap-3 border-b bg-background px-3">
       <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 pr-2">
+          <img
+            src={`${import.meta.env.BASE_URL}favicon.svg`}
+            alt="Writedown"
+            className="h-6 w-6"
+            draggable={false}
+          />
+          <div className="text-sm font-semibold tracking-tight">Writedown</div>
+        </div>
+        <div className="h-6 w-px bg-border" />
         <div className="flex items-center gap-2 rounded-md border bg-card px-2 py-1 text-xs text-muted-foreground">
           <span className="font-medium text-foreground">Board</span>
           <span className="max-w-[12rem] truncate">{params.session.boardId}</span>
