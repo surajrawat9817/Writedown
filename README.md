@@ -166,6 +166,10 @@ Steps:
 4. Your site URL will be:
    - `https://<user>.github.io/<repo>/`
 
+If the workflow fails in `actions/configure-pages@v5` with `Get Pages site failed (404)`, Pages is not enabled yet.
+You can fix it either by enabling Pages in repo settings (step 2), or by adding a PAT as `PAGES_TOKEN`
+(repo Settings → Secrets and variables → Actions → New repository secret) so the workflow can enable Pages automatically.
+
 ### SPA routing on GitHub Pages
 
 GitHub Pages returns `404.html` for unknown routes. To support refresh/deep-links like `/board/<id>`:
@@ -188,4 +192,3 @@ If you deploy to a **custom domain** (no `/<repo>/` base path), adjust `segmentC
   - Sharing a board URL is only meaningful on the same browser/device (unless you also migrate storage)
 
 If you want real-time collaboration again, the existing Yjs-based architecture is designed to plug into a sync layer (e.g., WebSocket) without changing the canvas/model code.
-
