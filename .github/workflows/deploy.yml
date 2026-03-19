@@ -5,6 +5,11 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+env:
+  # GitHub Actions is deprecating Node.js 20 for JavaScript-based actions.
+  # Opt in early so checkout/configure-pages/setup-node run on Node.js 24 runtime.
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 permissions:
   contents: read
   pages: write
@@ -35,6 +40,9 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          # If Pages isn't enabled yet in repo settings, automatically enable it.
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -51,4 +59,3 @@ jobs:
       - id: deployment
         name: Deploy
         uses: actions/deploy-pages@v4
-
