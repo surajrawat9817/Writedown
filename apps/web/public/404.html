@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whiteboard</title>
+    <script>
+      (function () {
+        // GitHub Pages serves sites at /<repo>/ by default, so we keep 1 path segment.
+        // If you deploy to a custom domain (no /<repo>/ base path), set this to 0.
+        var segmentCount = 1;
+        var l = window.location;
+        var segments = l.pathname.split("/");
+        var base = segments.slice(0, 1 + segmentCount).join("/");
+        var rest = segments.slice(1 + segmentCount).join("/");
+        var search = l.search ? "&" + l.search.slice(1) : "";
+        l.replace(l.protocol + "//" + l.host + base + "/?p=" + encodeURIComponent("/" + rest) + search + l.hash);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
+
